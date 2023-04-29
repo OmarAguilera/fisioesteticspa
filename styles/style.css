@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background-color: #96aedd;
+}
+
+.fisio1 {
+    background-color: #29366a;
+}
+
+
+.contenedor > * {
+    text-align: center;
+    border-radius: 8px;
+}
+
+.header {
+    grid-area: header;
+    background-color: #29366a;
+    position:relative;
+    display:block;
+}
+.nav {
+    grid-area: navbar;
+    background-color: 96aedd;
+}
+.spacer {
+    grid-area: spacer;
+    background-color: #29366a;
+    height: 5px;
+}
+.main {
+    grid-area: main;
+}
+.widget1 {
+    grid-area: widget1;
+}
+.widget2 {
+    grid-area: widget2;
+}
+.footer {
+    grid-area: footer;
+    background-color: #29366a;
+}
+
+
+.contenedor {
+    display: grid;
+    grid-template:
+    "navbar" auto
+    "header" auto
+    "spacer"
+    "main"   700px
+    "widget1"auto
+    "widget2"auto
+    "footer" 200px;
+}
+
+@media (min-width: 600px) {
+    .contenedor {
+        display: grid;
+        grid-template:
+        "header" auto
+        "navbar" auto
+        "main"   700px
+        "widget1"auto
+        "widget2"auto
+        "footer" 200px
+        "spacer";
+    }    
+}
+@media (min-width: 900px) {
+    .contenedor {
+    display: grid;
+        grid-template:
+        "header header" auto
+        "navbar navbar" 60px
+        "main main"   700px
+        "widget1 widget2" auto
+        "footer footer" 400px
+        "spacer spacer";
+    }    
+}
+
+
+
+/* Footer */
+.flex-container {
+    display: flex;
+    flex-direction: column-row;
+    justify-content: space-evenly;
+    height: 100%;
+    align-items: center; /* esto alinea al centro de manera verical */
+}
+    
+.sideA .sideB .sideC {
+background-color: white;
+width: 200px;
+margin: 10px;
+text-align: center;
+line-height: 100px;
+font-size: 50px;
+justify-content: -between;
+}
+
+.sideA {
+    order: 3;
+}
+
+a{
+    text-decoration: none;
+    color:white
+} 
+
+.sideB {
+    order: 2
+} 
+.sideC {
+    order: 1;
+} 
+
+.widget {
+    height: 400px;
+    margin-bottom: 50px;
+}
+
+.WA {
+    position: fixed;
+    z-index: 999;
+    transition: ease;
+    bottom: 20px;
+    right: 30px;
+}
+
+.WA:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.WAbutton {
+    width: ;
+
+}
